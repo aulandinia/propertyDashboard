@@ -9,6 +9,8 @@ export const customers = [
       city: 'Parkersburg',
       street: '2849 Fulton Street'
     },
+    total_lot:10,
+    total_fund:100000000,
     avatarUrl: '/static/images/avatars/avatar_3.png',
     createdAt: 1555016400000,
     email: 'ekaterina.tankova@devias.io',
@@ -23,6 +25,8 @@ export const customers = [
       city: 'Iowa',
       street: '1865  Pleasant Hill Road'
     },
+    total_lot:10,
+    total_fund:10000000,
     avatarUrl: '/static/images/avatars/avatar_4.png',
     createdAt: 1555016400000,
     email: 'cao.yu@devias.io',
@@ -37,6 +41,8 @@ export const customers = [
       city: 'Atlanta',
       street: '4894  Lakeland Park Drive'
     },
+    total_lot:10,
+    total_fund:200000000,
     avatarUrl: '/static/images/avatars/avatar_2.png',
     createdAt: 1555016400000,
     email: 'alexa.richardson@devias.io',
@@ -55,7 +61,9 @@ export const customers = [
     createdAt: 1554930000000,
     email: 'anje.keizer@devias.io',
     name: 'Anje Keizer',
-    phone: '908-691-3242'
+    phone: '908-691-3242',
+    total_lot:10,
+    total_fund:20000000,
   },
   {
     id: uuid(),
@@ -69,6 +77,8 @@ export const customers = [
     createdAt: 1554757200000,
     email: 'clarke.gillebert@devias.io',
     name: 'Clarke Gillebert',
+    total_lot:10,
+    total_fund:30000000,
     phone: '972-333-4106'
   },
   {
@@ -79,6 +89,8 @@ export const customers = [
       city: 'Bakerfield',
       street: '317 Angus Road'
     },
+    total_lot:10,
+    total_fund:10000000,
     avatarUrl: '/static/images/avatars/avatar_1.png',
     createdAt: 1554670800000,
     email: 'adam.denisov@devias.io',
@@ -93,6 +105,8 @@ export const customers = [
       city: 'Redondo Beach',
       street: '2188  Armbrester Drive'
     },
+    total_lot:10,
+    total_fund:10000000,
     avatarUrl: '/static/images/avatars/avatar_7.png',
     createdAt: 1554325200000,
     email: 'ava.gregoraci@devias.io',
@@ -107,6 +121,8 @@ export const customers = [
       city: 'Las Vegas',
       street: '1798  Hickory Ridge Drive'
     },
+    total_lot:10,
+    total_fund:1000000000,
     avatarUrl: '/static/images/avatars/avatar_8.png',
     createdAt: 1523048400000,
     email: 'emilee.simchenko@devias.io',
@@ -115,6 +131,8 @@ export const customers = [
   },
   {
     id: uuid(),
+    total_lot:10,
+    total_fund:10000000,
     address: {
       country: 'USA',
       state: 'Michigan',
@@ -135,6 +153,8 @@ export const customers = [
       city: 'Salt Lake City',
       street: '368 Lamberts Branch Road'
     },
+    total_lot:10,
+    total_fund:1000000,
     avatarUrl: '/static/images/avatars/avatar_10.png',
     createdAt: 1522702800000,
     email: 'merrile.burgett@devias.io',

@@ -30,7 +30,7 @@ export const NavItem = (props) => {
           sx={{
             backgroundColor: active && 'rgba(255,255,255, 0.08)',
             borderRadius: 1,
-            color: active ? 'secondary.main' : 'neutral.300',
+            color: active ? 'secondary.main' : 'black',
             fontWeight: active && 'fontWeightBold',
             justifyContent: 'flex-start',
             px: 3,

@@ -14,12 +14,13 @@ import { UserAdd as UserAddIcon } from '../icons/user-add';
 import { Users as UsersIcon } from '../icons/users';
 import { XCircle as XCircleIcon } from '../icons/x-circle';
 import { Logo } from './logo';
+import Image from "next/image"
 import { NavItem } from './nav-item';
 
 const items = [
   {
     href: '/',
-    icon: (<ChartBarIcon fontSize="small" />),
+    icon: (<ChartBarIcon fontSize="small"/>),
     title: 'Dashboard'
   },
   {
@@ -42,21 +43,21 @@ const items = [
     icon: (<CogIcon fontSize="small" />),
     title: 'Settings'
   },
-  {
-    href: '/login',
-    icon: (<LockIcon fontSize="small" />),
-    title: 'Login'
-  },
-  {
-    href: '/register',
-    icon: (<UserAddIcon fontSize="small" />),
-    title: 'Register'
-  },
-  {
-    href: '/404',
-    icon: (<XCircleIcon fontSize="small" />),
-    title: 'Error'
-  }
+  // {
+  //   href: '/login',
+  //   icon: (<LockIcon fontSize="small" />),
+  //   title: 'Login'
+  // },
+  // {
+  //   href: '/register',
+  //   icon: (<UserAddIcon fontSize="small" />),
+  //   title: 'Register'
+  // },
+  // {
+  //   href: '/404',
+  //   icon: (<XCircleIcon fontSize="small" />),
+  //   title: 'Error'
+  // }
 ];
 
 export const DashboardSidebar = (props) => {
@@ -87,7 +88,9 @@ export const DashboardSidebar = (props) => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          height: '100%'
+          height: '100%',
+          backgroundColor:"#ffd600"
+          
         }}
       >
         <div>
@@ -97,12 +100,7 @@ export const DashboardSidebar = (props) => {
               passHref
             >
               <a>
-                <Logo
-                  sx={{
-                    height: 42,
-                    width: 42
-                  }}
-                />
+               <Image src="/static/images/ic_logo.png" width="180" height={180} alt='property.co.id'  />
               </a>
             </NextLink>
           </Box>
@@ -121,27 +119,14 @@ export const DashboardSidebar = (props) => {
             >
               <div>
                 <Typography
-                  color="inherit"
+                  color="black"
                   variant="subtitle1"
                 >
-                  Acme Inc
+                  Property.co.id
                 </Typography>
-                <Typography
-                  color="neutral.400"
-                  variant="body2"
-                >
-                  Your tier
-                  {' '}
-                  : Premium
-                </Typography>
+          
               </div>
-              <SelectorIcon
-                sx={{
-                  color: 'neutral.500',
-                  width: 14,
-                  height: 14
-                }}
-              />
+            
             </Box>
           </Box>
         </div>
@@ -158,60 +143,12 @@ export const DashboardSidebar = (props) => {
               icon={item.icon}
               href={item.href}
               title={item.title}
+      
             />
           ))}
         </Box>
         <Divider sx={{ borderColor: '#2D3748' }} />
-        <Box
-          sx={{
-            px: 2,
-            py: 3
-          }}
-        >
-          <Typography
-            color="neutral.100"
-            variant="subtitle2"
-          >
-            Need more features?
-          </Typography>
-          <Typography
-            color="neutral.500"
-            variant="body2"
-          >
-            Check out our Pro solution template.
-          </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              mt: 2,
-              mx: 'auto',
-              width: '160px',
-              '& img': {
-                width: '100%'
-              }
-            }}
-          >
-            <img
-              alt="Go to pro"
-              src="/static/images/sidebar_pro.png"
-            />
-          </Box>
-          <NextLink
-            href="https://material-kit-pro-react.devias.io/"
-            passHref
-          >
-            <Button
-              color="secondary"
-              component="a"
-              endIcon={(<OpenInNewIcon />)}
-              fullWidth
-              sx={{ mt: 2 }}
-              variant="contained"
-            >
-              Pro Live Preview
-            </Button>
-          </NextLink>
-        </Box>
+   
       </Box>
     </>
   );

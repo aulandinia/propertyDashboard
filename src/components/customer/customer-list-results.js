@@ -61,11 +61,18 @@ export const CustomerListResults = ({ customers, ...rest }) => {
   const handlePageChange = (event, newPage) => {
     setPage(newPage);
   };
+  const changeToPirce=(num)=>{
+    const euros = new Intl.NumberFormat(`fr-FR`, {
+      currency: `IDR`,
+      style: 'currency',
+  }).format(num);
+  return euros
+  }
 
   return (
     <Card {...rest}>
-      <PerfectScrollbar>
-        <Box sx={{ minWidth: 1050 }}>
+      <PerfectScrollbar style={{overflow:"scroll"}}>
+        <Box sx={{ minWidth: 1050, }}>
           <Table>
             <TableHead>
               <TableRow>
@@ -87,10 +94,10 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                   Email
                 </TableCell>
                 <TableCell>
-                  Location
+                  Total Lot
                 </TableCell>
                 <TableCell>
-                  Phone
+                  Total fund
                 </TableCell>
                 <TableCell>
                   Registration date
@@ -136,10 +143,11 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                     {customer.email}
                   </TableCell>
                   <TableCell>
-                    {`${customer.address.city}, ${customer.address.state}, ${customer.address.country}`}
+                    {/* {`${customer.address.city}, ${customer.address.state}, ${customer.address.country}`} */}
+                  {customer.total_lot}
                   </TableCell>
                   <TableCell>
-                    {customer.phone}
+                    {changeToPirce(customer.total_fund)}
                   </TableCell>
                   <TableCell>
                     {format(customer.createdAt, 'dd/MM/yyyy')}
